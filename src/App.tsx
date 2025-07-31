@@ -1,11 +1,14 @@
 import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
 import FAQ from './components/FAQ';
 
 function App() {
   return (
-    <div className="App">
-      <FAQ />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <FAQ />
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -1,10 +1,12 @@
 import React from 'react';
 import FAQItem from './FAQItem';
+import ThemeToggle from './ThemeToggle';
 import { faqData } from '../data/faqData';
 
 const FAQ: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white py-12 md:py-16 lg:py-20">
+    <div className="min-h-screen bg-white dark:bg-gray-900 py-12 md:py-16 lg:py-20 transition-colors duration-300">
+      <ThemeToggle />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -14,7 +16,7 @@ const FAQ: React.FC = () => {
         </div>
 
         {/* FAQ Items */}
-        <div className="bg-white border-t border-gray-200">
+        <div className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
           {faqData.map((item) => (
             <FAQItem key={item.id} item={item} />
           ))}
